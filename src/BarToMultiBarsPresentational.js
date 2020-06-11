@@ -14,3 +14,5 @@ const BarToMultiBarsPresentational = ({w, h, scale, onClick}) => {
         {[0, 1, 2, 3, 4].map(i => <CurrDiv key = `bar_${i}` style = {getBarStyle(i)} />)}
     </div>
 }
+
+export default BarToMultiBarsPresentational
