@@ -1,6 +1,6 @@
 import React from 'react'
 import {useAnimatedScale, useDimension} from './hooks'
-
+import BarToMultiBarsPresentational from './BarToMultiBarsPresentational'
 const BarToMultiBarsComponent = (props) => {
     const {w, h} = useDimension()
     const {scale, start} = useAnimatedScale(0.02 / 5, 20)
