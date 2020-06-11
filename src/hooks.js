@@ -38,6 +38,10 @@ export const useDimension = () => {
             }
         }
     })
+    return {
+        w,
+        h
+    }
 }
 
 export const useStyle = (w, h, scale) => {
@@ -52,12 +56,12 @@ export const useStyle = (w, h, scale) => {
     const bars = 5
     return {
         getBarStyle(i) {
-            const sfi = divideScale(scale, i, bars)
+            const sfi = divideScale(sf, i, bars)
             const gap = hSize / bars
             const left = `${fx - hSize / 2 + i * gap}px`
-            const top = `${fy - wSize * sfi}px`
+            const top = `${fy - wSize - hSize * sfi}px`
             const width = `${gap}px`
-            const height = `${wSize}px`
+            const height = `${hSize * sfi}px`
             const background = color
             return {position, left, top, width, height, background}
         },

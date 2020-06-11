@@ -6,7 +6,7 @@ import BarToMultiBarsComponent from './BarToMultiBarsComponent'
 function App() {
   return (
     <div className="App">
-      <BarToMultiBarsComponent>
+      <BarToMultiBarsComponent/>
     </div>
   );
 }

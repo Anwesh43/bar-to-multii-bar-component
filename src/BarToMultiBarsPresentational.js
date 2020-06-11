@@ -11,7 +11,7 @@ const BarToMultiBarsPresentational = ({w, h, scale, onClick}) => {
     return <div onClick = {onClick}>
         <CurrDiv key = "fixed_bar" style = {getFixedBar()}/>
         <CurrDiv key = "dynamic_bar" style = {getDynamicBar()}/>
-        {[0, 1, 2, 3, 4].map(i => <CurrDiv key = `bar_${i}` style = {getBarStyle(i)} />)}
+        {[0, 1, 2, 3, 4].map(i => <CurrDiv key = {`bar_${i}`} style = {getBarStyle(i)} />)}
     </div>
 }
 
