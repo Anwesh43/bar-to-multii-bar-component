@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {divideScale, sinify} from './utils'
 
 export const useAnimatedScale = (scGap, delay) => {
     const [scale, setScale] = useState(0)
@@ -21,4 +22,20 @@ export const useAnimatedScale = (scGap, delay) => {
             }
         }
     }
+}
+
+export const useDimension = () => {
+    const [w, setW] = useState(window.innerWidth)
+    const [h, setH] = useState(window.innerHeight)
+    useEffect(() => {
+        window.onresize = () => {
+            setW(window.innerWidth)
+            setH(window.innerHeight)
+        }
+        return () => {
+            window.onresize = () => {
+
+            }
+        }
+    })
 }
